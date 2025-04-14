@@ -12,14 +12,12 @@
   <div><a href="/dice/5/4">5d4</a></div>
 <div>-->
 
-<h1>1d20<h1>
+<h1>100d6</h1>
 
-<% if @first_die == 1%>
-  <p style="color: red"><%= @outcome %></p>
-<% elseif @first_die == 20%>
-  <p style="color: green"><%= @outcome %></p>
-<% else %>
-  <p><%= @outcome %></p>
+<ul>
+  <% @rolls.each do |a_roll|%>
+  <li>
+  <%= a_roll %>
+  </li>
 <% end %>
-<body>
-<html>
+</ul>
